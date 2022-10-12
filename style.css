@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to left, rgb(77, 75, 75), rgb(194, 184, 184));
+}
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: #1e9c33;
+    border-right: 4px solid #888b8d;
+    transition: all 0.5s linear;
+    top: 0px;
+    left: -260px;
+ 
+}
+.sidebar ul li {
+    list-style: none;
+    color: #fff;
+}
+li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    line-height: 35px;
+    transition: .4s all linear;
+}
+li a:hover {
+    color: rgba(236, 235, 233, 0.925);
+    font-size: 17px;
+    text-decoration: underline;
+}
+
+.menu_btn {
+    display: block;
+    position: relative;
+    margin: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    border: 4px solid rgb(46, 48, 46);
+}
+
+.menu_btn:hover {
+    border: 4px solid green;
+    transition: 1.5s;
+}
+
+
+
+.menu_btn span,
+.menu_btn span::before,
+.menu_btn span::after {
+    position: absolute;
+    top: 50%; margin-top: -2px;
+    left: 50%; margin-left: -15px;
+    width: 30px;
+    height: 4px;
+    background-color: green;
+}
+
+.menu_btn span::before {
+    content: '';
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+.menu_btn span::after {
+    content: '';
+    transform: translateY(10px);
+    transition: 0.5s;
+}
+
+.menu_btn.active span::before {
+    transform: rotate(45deg);
+    background-color: red
+}
+
+.menu_btn.active span::after {
+    transform: rotate(-45deg);
+    background-color: red
+}
+
+.menu_btn.active {
+    border: 4px solid rgb(228, 243, 228);
+}
+
+.active span {
+    height: 0;
+}
+
+.sidebar .showMenu {
+    position: relative;
+    top: 0px;
+    left: 10px;
+}
